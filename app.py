@@ -39,7 +39,7 @@ def get_pipeline():
         _PIPELINE_CACHE = BaseChronosPipeline.from_pretrained(
             "amazon/chronos-t5-small",
             device_map="cpu",
-            dtype=torch.float32,
+            torch_dtype=torch.float32,
         )
         logger.info("[Chronos] Model loaded and cached.")
     return _PIPELINE_CACHE
